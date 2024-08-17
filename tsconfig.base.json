@@ -15,6 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@vendor-payment/my-prisma-client": [
+        "libs/my-prisma-client/src/index.ts"
+      ],
+      "@vendor-payment/my-schema": ["libs/my-schema/src/index.ts"],
       "@vendor-payment/ui": ["shared/ui/src/index.ts"],
       "@vendor-payment/util": ["shared/util/src/index.ts"]
     }

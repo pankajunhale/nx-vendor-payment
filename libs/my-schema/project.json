@@ -1,0 +1,15 @@
+{
+  "name": "my-schema",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/my-schema/prisma",
+  "projectType": "library",
+  "tags": ["my-schema"],
+  "targets": {
+    "migrate": {
+      "command": "npx prisma migrate dev",
+      "options": {
+        "cwd": "./libs/my-schema/prisma/"
+      }
+    }
+  }
+}
