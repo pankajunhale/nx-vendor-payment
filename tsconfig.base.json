@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@vendor-payment/data-access-users": [
+        "libs/data-access-users/src/index.ts"
+      ],
       "@vendor-payment/my-prisma-client": [
         "libs/my-prisma-client/src/index.ts"
       ],
