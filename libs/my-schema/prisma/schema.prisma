@@ -1,7 +1,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../../../node_modules/@prisma/client/my-schema"
+  output   = "../../../node_modules/@prisma-clients/my-schema"
 }
 
 datasource db {
@@ -13,6 +13,7 @@ model User {
   id    Int     @default(autoincrement()) @id
   email String  @unique
   name  String?
+  contactNumber String?
   posts Post[]
 }
 

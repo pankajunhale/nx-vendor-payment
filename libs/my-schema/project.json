@@ -5,8 +5,20 @@
   "projectType": "library",
   "tags": ["my-schema"],
   "targets": {
+    "prisma": {
+      "command": "npx prisma",
+      "options": {
+        "cwd": "./libs/my-schema/prisma/"
+      }
+    },
     "migrate": {
       "command": "npx prisma migrate dev",
+      "options": {
+        "cwd": "./libs/my-schema/prisma/"
+      }
+    },
+    "generate-types": {
+      "command": "npx prisma generate",
       "options": {
         "cwd": "./libs/my-schema/prisma/"
       }

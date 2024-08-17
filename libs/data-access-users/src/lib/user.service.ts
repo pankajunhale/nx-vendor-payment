@@ -10,4 +10,8 @@ export class UserService {
       where: userWhereUniqueInput,
     });
   }
+
+  async findAllUsers() {
+    return this.prisma.user.findMany();
+  }
 }
