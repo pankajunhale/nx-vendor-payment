@@ -1,0 +1,14 @@
+model InstanceLocation {
+  id                String   @id @default(uuid())
+  instanceTypeId    String
+  profileId         String   @unique
+  githubToken       String
+  githubTokenExpiry DateTime
+  githubPath        String
+  defaultBranch     String
+  createdAt         DateTime @default(now()) @db.DateTime(0)
+  updatedAt         DateTime @updatedAt
+
+  profile      Profile      @relation(fields: [profileId], references: [id])
+  instanceType InstanceType @relation(fields: [instanceTypeId], references: [id])
+}

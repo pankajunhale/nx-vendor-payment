@@ -1,0 +1,23 @@
+model Profile {
+  id             String   @id @default(uuid())
+  userId         String   @unique
+  avatar         String?
+  accountNo      Int      @unique
+  pcId           String   @unique
+  fileIdentifier String
+  countryId      Int      @default(1)
+  stateId        Int
+  districtId     Int
+  mobileNumber   Int      @unique
+  address        String?
+  buildingNumber String?
+  street         String?
+  town           String?
+  postalCode     Int?
+  createdAt      DateTime @default(now()) @db.DateTime(0)
+  updatedAt      DateTime @updatedAt
+
+  user     User      @relation(fields: [userId], references: [id])
+  customer Customer?
+  instance InstanceLocation?
+}

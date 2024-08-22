@@ -1,0 +1,12 @@
+model Customer {
+  id        String   @id @default(uuid())
+  profileId String   @unique
+  name      String
+  email     String   @unique
+  domain    String
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now()) @db.DateTime(0)
+  updatedAt DateTime @updatedAt
+
+  profile Profile @relation(fields: [profileId], references: [id])
+}
